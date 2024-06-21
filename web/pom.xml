@@ -46,43 +46,43 @@
 	<build>
 		<plugins>
 			<plugin>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 
-			<executions>
-				<!--Generar fichero build-info-->
-				<execution>
-					<phase>prepare-package</phase>
-					<id>build-info</id>
-					<goals>
-						<goal>build-info</goal>
-					</goals>
-					<configuration>
-						<additionalProperties>
-							<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-							<custom>custom value</custom>
-							<java.version>${java.version}</java.version>
-							<java.vendor>${java.vendor}</java.vendor>
-						</additionalProperties>
-					</configuration>
-				</execution>
-				<!--Generar fichero jar <classifier>spring-boot</classifier>-->
-				<execution>
-					<goals>
-						<goal>repackage</goal>
-					</goals>
-					<configuration>
-						<includeSystemScope>true</includeSystemScope>
-						<executable>true</executable>
-						<classifier>spring-boot</classifier>
-						<excludeDevtools>true</excludeDevtools>
-						<outputTimestamp>${project.build.outputTimestamp}</outputTimestamp>
-						<mainClass>
-							HMSApplication
-						</mainClass>
-					</configuration>
-				</execution>
-			</executions>
+				<executions>
+					<!--Generar fichero build-info-->
+					<execution>
+						<phase>prepare-package</phase>
+						<id>build-info</id>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+						<configuration>
+							<additionalProperties>
+								<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+								<custom>custom value</custom>
+								<java.version>${java.version}</java.version>
+								<java.vendor>${java.vendor}</java.vendor>
+							</additionalProperties>
+						</configuration>
+					</execution>
+					<!--Generar fichero jar <classifier>spring-boot</classifier>-->
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<includeSystemScope>true</includeSystemScope>
+							<executable>true</executable>
+							<classifier>spring-boot</classifier>
+							<excludeDevtools>true</excludeDevtools>
+							<outputTimestamp>${project.build.outputTimestamp}</outputTimestamp>
+							<mainClass>
+								HMSApplication
+							</mainClass>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

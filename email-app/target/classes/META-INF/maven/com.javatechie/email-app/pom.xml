@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>hospital-management-system</artifactId>
-        <groupId>com.javatechie</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>hospital-management-system</artifactId>
+		<groupId>com.javatechie</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
 
-    <artifactId>email-app</artifactId>
-<packaging>jar</packaging>
+	<artifactId>email-app</artifactId>
+	<packaging>jar</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+
+				<executions>
+					<!--Generar fichero build-info-->
+					<execution>
+						<phase>prepare-package</phase>
+						<id>build-info</id>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+						<configuration>
+							<additionalProperties>
+								<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+								<custom>custom value</custom>
+								<java.version>${java.version}</java.version>
+								<java.vendor>${java.vendor}</java.vendor>
+							</additionalProperties>
+						</configuration>
+					</execution>
+					<!--Generar fichero jar <classifier>spring-boot</classifier>-->
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<executable>false</executable>
+							<classifier>spring-boot</classifier>
+							<excludeDevtools>true</excludeDevtools>
+							<outputTimestamp>${project.build.outputTimestamp}</outputTimestamp>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
