@@ -9,14 +9,16 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
+	<!--this jar-->
 	<artifactId>web</artifactId>
 	<packaging>jar</packaging>
+	<version>1.0.0</version><!--$NO-MVN-MAN-VER$-->
 
 	<dependencies>
 		<dependency>
-			<groupId>com.javatechie</groupId>
+			<groupId>com.javatechie.service.doctor</groupId>
 			<artifactId>service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>

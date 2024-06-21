@@ -11,12 +11,13 @@
 
 	<artifactId>repository</artifactId>
 	<packaging>jar</packaging>
+	<version>1.0.0</version><!--$NO-MVN-MAN-VER$-->
 
 	<dependencies>
 
 		<dependency>
-			<groupId>com.javatechie</groupId>
 			<artifactId>domain</artifactId>
+			<groupId>com.javatechie.model.doctor</groupId>
 			<version>1.0.0</version><!--$NO-MVN-MAN-VER$-->
 		</dependency>
 

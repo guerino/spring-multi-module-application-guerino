@@ -9,8 +9,10 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
+	<!--this jar-->
 	<artifactId>email-app</artifactId>
 	<packaging>jar</packaging>
+	<version>1.0.0</version><!--$NO-MVN-MAN-VER$-->
 
 	<build>
 		<plugins>

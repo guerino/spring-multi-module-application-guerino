@@ -12,7 +12,7 @@
 	<!--This jar-->
 	<groupId>com.javatechie.model.doctor</groupId>
 	<artifactId>domain</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.0</version><!--$NO-MVN-MAN-VER$-->
 	<description>Entity layer</description>
 	<packaging>jar</packaging>
 

@@ -15,6 +15,7 @@ public class DoctorService {
 
 	@Autowired
 	private DoctorRepository repository;
+	
 	@Autowired
 	private EmailService service;
 
