@@ -15,7 +15,6 @@
 
 	<packaging>pom</packaging>
 	<modules>
-		<module>email-app</module>
 		<module>domain</module>
 		<module>repository</module>
 		<module>service</module>

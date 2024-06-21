@@ -1,7 +1,7 @@
 package com.javatechie.service.doctor;
 
 import com.javatechie.dao.doctor.DoctorRepository;
-import com.javatechie.mailservice.EmailService;
+//import com.javatechie.mailservice.EmailService;
 import com.javatechie.model.doctor.Doctor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,8 +16,8 @@ public class DoctorService {
 	@Autowired
 	private DoctorRepository repository;
 	
-	@Autowired
-	private EmailService service;
+	//@Autowired
+	//private EmailService service;
 
 	@jakarta.annotation.PostConstruct
 	public void initDoctor() {
@@ -26,7 +26,7 @@ public class DoctorService {
 	}
 
 	public List<Doctor> getDoctors() {
-		service.sendEMail();
+		//service.sendEMail();
 		return repository.findAll();
 	}
 }

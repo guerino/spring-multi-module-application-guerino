@@ -17,11 +17,13 @@
 	<packaging>jar</packaging>
 
 	<dependencies>
+		<!--
 		<dependency>
 			<artifactId>email-app</artifactId>
 			<groupId>com.javatechie</groupId>
 			<version>1.0.0</version>
 		</dependency>
+		-->
 
 		<dependency>
 			<artifactId>repository</artifactId>
